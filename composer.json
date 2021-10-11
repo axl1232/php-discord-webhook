@@ -1,0 +1,22 @@
+{
+    "name": "axl1232/discordphp",
+    "description": "A php library to use Discord webhooks.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "axl1232",
+            "email": "axl1232@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Axl1232\\DiscordPhp\\": "src/"
+        }
+    }
+}
