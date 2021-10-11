@@ -2,7 +2,9 @@
 
 namespace Axl1232\DiscordPhp\Embed;
 
-class Thumbnail
+use Axl1232\DiscordPhp\Interfaces\ArrayableInterface;
+
+class Thumbnail implements ArrayableInterface
 {
     private string $url;
     private ?string $proxyUrl = null;

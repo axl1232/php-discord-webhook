@@ -199,16 +199,16 @@ class Embed implements ArrayableInterface
         }
 
         if (count($this->fields) > 0) {
-            $embeds = [];
+            $fields = [];
 
             foreach ($this->fields as $field) {
                 if ($field instanceof Field) {
-                    $embeds[] = $field->toArray();
+                    $fields[] = $field->toArray();
                 }
             }
 
-            if (count($embeds) > 0) {
-                $data['embeds'] = $embeds;
+            if (count($fields) > 0) {
+                $data['fields'] = $fields;
             }
         }
 
