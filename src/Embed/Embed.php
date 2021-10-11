@@ -13,7 +13,7 @@ class Embed implements ArrayableInterface
     private ?string $description = null;
     private ?DateTime $timestamp = null;
     private ?string $url = null;
-    private ?string $color = null;
+    private ?int $color = null;
     private ?Author $author = null;
     private ?Image $image = null;
     private ?Thumbnail $thumbnail = null;
@@ -75,12 +75,12 @@ class Embed implements ArrayableInterface
         return $this;
     }
 
-    public function getColor(): ?string
+    public function getColor(): ?int
     {
         return $this->color;
     }
 
-    public function setColor(?string $color): self
+    public function setColor(?int $color): self
     {
         $this->color = $color;
 
