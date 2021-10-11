@@ -28,9 +28,11 @@ class Video implements ArrayableInterface
         return $this->proxyUrl;
     }
 
-    public function setProxyUrl(?string $proxyUrl): void
+    public function setProxyUrl(?string $proxyUrl): self
     {
         $this->proxyUrl = $proxyUrl;
+
+        return $this;
     }
 
     public function getHeight(): ?int
@@ -38,9 +40,11 @@ class Video implements ArrayableInterface
         return $this->height;
     }
 
-    public function setHeight(?int $height): void
+    public function setHeight(?int $height): self
     {
         $this->height = $height;
+
+        return $this;
     }
 
     public function getWidth(): ?int
@@ -48,9 +52,11 @@ class Video implements ArrayableInterface
         return $this->width;
     }
 
-    public function setWidth(?int $width): void
+    public function setWidth(?int $width): self
     {
         $this->width = $width;
+
+        return $this;
     }
 
     public function toArray(): array

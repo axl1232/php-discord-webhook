@@ -116,9 +116,11 @@ class Embed implements ArrayableInterface
         return $this->thumbnail;
     }
 
-    public function setThumbnail(?Thumbnail $thumbnail): void
+    public function setThumbnail(?Thumbnail $thumbnail): self
     {
         $this->thumbnail = $thumbnail;
+
+        return $this;
     }
 
     public function getVideo(): ?Video
@@ -126,9 +128,11 @@ class Embed implements ArrayableInterface
         return $this->video;
     }
 
-    public function setVideo(?Video $video): void
+    public function setVideo(?Video $video): self
     {
         $this->video = $video;
+
+        return $this;
     }
 
     public function getProvider(): ?Provider
@@ -136,9 +140,11 @@ class Embed implements ArrayableInterface
         return $this->provider;
     }
 
-    public function setProvider(?Provider $provider): void
+    public function setProvider(?Provider $provider): self
     {
         $this->provider = $provider;
+
+        return $this;
     }
 
     public function getFields(): SplObjectStorage

@@ -52,9 +52,11 @@ class Author implements ArrayableInterface
         return $this->proxyIconUrl;
     }
 
-    public function setProxyIconUrl(?string $proxyIconUrl): void
+    public function setProxyIconUrl(?string $proxyIconUrl): self
     {
         $this->proxyIconUrl = $proxyIconUrl;
+
+        return $this;
     }
 
     public function toArray(): array

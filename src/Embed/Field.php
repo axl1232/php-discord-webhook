@@ -15,9 +15,11 @@ class Field implements ArrayableInterface
         return $this->name;
     }
 
-    public function setName(string $name): void
+    public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
     }
 
     public function getValue(): string
@@ -25,9 +27,11 @@ class Field implements ArrayableInterface
         return $this->value;
     }
 
-    public function setValue(string $value): void
+    public function setValue(string $value): self
     {
         $this->value = $value;
+
+        return $this;
     }
 
     public function isInline(): bool
@@ -35,9 +39,11 @@ class Field implements ArrayableInterface
         return $this->inline;
     }
 
-    public function setInline(bool $inline): void
+    public function setInline(bool $inline): self
     {
         $this->inline = $inline;
+
+        return $this;
     }
 
     public function toArray(): array
