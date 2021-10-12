@@ -1,7 +1,14 @@
 <?php
 
-namespace Axl1232\PhpDiscordWebhook\Embed;
+namespace Axl1232\PhpDiscordWebhook;
 
+use Axl1232\PhpDiscordWebhook\Embed\Author;
+use Axl1232\PhpDiscordWebhook\Embed\Field;
+use Axl1232\PhpDiscordWebhook\Embed\Footer;
+use Axl1232\PhpDiscordWebhook\Embed\Image;
+use Axl1232\PhpDiscordWebhook\Embed\Provider;
+use Axl1232\PhpDiscordWebhook\Embed\Thumbnail;
+use Axl1232\PhpDiscordWebhook\Embed\Video;
 use Axl1232\PhpDiscordWebhook\Interfaces\ArrayableInterface;
 use DateTime;
 use SplObjectStorage;

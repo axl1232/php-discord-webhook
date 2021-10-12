@@ -1,8 +1,7 @@
 <?php
 
-namespace Axl1232\PhpDiscordWebhook\Message;
+namespace Axl1232\PhpDiscordWebhook;
 
-use Axl1232\PhpDiscordWebhook\Embed\Embed;
 use Axl1232\PhpDiscordWebhook\Interfaces\ArrayableInterface;
 use SplObjectStorage;
 

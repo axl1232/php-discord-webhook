@@ -1,6 +1,6 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Tools;
+namespace Axl1232\PhpDiscordWebhook\Tools;
 
 class ColorHelper
 {
