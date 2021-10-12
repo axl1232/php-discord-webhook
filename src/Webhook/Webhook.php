@@ -1,10 +1,10 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Webhook;
+namespace Axl1232\PhpDiscordWebhook\Webhook;
 
-use Axl1232\DiscordPhp\Exception\DiscordInvalidResponseException;
-use Axl1232\DiscordPhp\Exception\DiscordSerializeException;
-use Axl1232\DiscordPhp\Message\Message;
+use Axl1232\PhpDiscordWebhook\Exception\DiscordInvalidResponseException;
+use Axl1232\PhpDiscordWebhook\Exception\DiscordSerializeException;
+use Axl1232\PhpDiscordWebhook\Message\Message;
 use CURLFile;
 use JsonException;
 

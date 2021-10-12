@@ -1,6 +1,6 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Exception;
+namespace Axl1232\PhpDiscordWebhook\Exception;
 
 use Exception;
 

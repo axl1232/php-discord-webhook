@@ -1,9 +1,9 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Message;
+namespace Axl1232\PhpDiscordWebhook\Message;
 
-use Axl1232\DiscordPhp\Embed\Embed;
-use Axl1232\DiscordPhp\Interfaces\ArrayableInterface;
+use Axl1232\PhpDiscordWebhook\Embed\Embed;
+use Axl1232\PhpDiscordWebhook\Interfaces\ArrayableInterface;
 use SplObjectStorage;
 
 class Message implements ArrayableInterface

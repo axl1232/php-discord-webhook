@@ -1,8 +1,8 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Embed;
+namespace Axl1232\PhpDiscordWebhook\Embed;
 
-use Axl1232\DiscordPhp\Interfaces\ArrayableInterface;
+use Axl1232\PhpDiscordWebhook\Interfaces\ArrayableInterface;
 
 class Provider implements ArrayableInterface
 {

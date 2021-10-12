@@ -1,5 +1,5 @@
 {
-    "name": "axl1232/discordphp",
+    "name": "axl1232/php-discord-webhook",
     "description": "A php library to use Discord webhooks.",
     "type": "library",
     "license": "GPL-3.0-or-later",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Axl1232\\DiscordPhp\\": "src/"
+            "Axl1232\\PhpDiscordWebhook\\": "src/"
         }
     }
 }

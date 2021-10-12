@@ -1,6 +1,6 @@
 <?php
 
-namespace Axl1232\DiscordPhp\Interfaces;
+namespace Axl1232\PhpDiscordWebhook\Interfaces;
 
 interface ArrayableInterface
 {
