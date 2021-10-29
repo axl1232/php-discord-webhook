@@ -12,6 +12,7 @@ class Message implements ArrayableInterface
     private ?string $username = null;
     private bool $tts = false;
     private ?string $file = null;
+    private ?string $filename = null;
 
     private SplObjectStorage $embeds;
 
@@ -80,6 +81,18 @@ class Message implements ArrayableInterface
         return $this;
     }
 
+    public function getFilename(): ?string
+    {
+        return $this->filename;
+    }
+
+    public function setFilename(?string $filename): self
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
     public function getEmbeds(): SplObjectStorage
     {
         return $this->embeds;
@@ -133,6 +146,7 @@ class Message implements ArrayableInterface
 
         if ($this->file !== null) {
             $data['file'] = $this->file;
+            $data['filename'] = $this->filename ?? basename($this->file);
         }
 
         return $data;

@@ -34,11 +34,13 @@ class Webhook
         try {
             if (isset($data['file'])) {
                 $file = $data['file'];
-                unset($data['file']);
+                $filename = $data['filename'];
+
+                unset($data['file'], $data['filename']);
 
                 $options[CURLOPT_HTTPHEADER] = ['Content-type: multipart/form-data'];
                 $options[CURLOPT_POSTFIELDS] = [
-                    'file' => new CURLFile($file, '', basename($file)),
+                    'file' => new CURLFile($file, '', $filename),
                     'payload_json' => json_encode($data, JSON_THROW_ON_ERROR),
                 ];
             } else {
