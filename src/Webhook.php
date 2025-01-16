@@ -17,7 +17,6 @@ class Webhook
         $this->url = $url;
     }
 
-
     public function setProxy(?string $proxy): self
     {
         $this->proxy = $proxy;
