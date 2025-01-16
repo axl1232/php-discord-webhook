@@ -10,26 +10,35 @@ use JsonException;
 class Webhook
 {
     private string $url;
+    private string $proxy;
 
     public function __construct(string $url)
     {
         $this->url = $url;
     }
 
+    public function setProxy(?string $proxy): self
+    {
+        $this->proxy = $proxy;
+
+        return $this;
+    }
+
     /**
      * @throws DiscordInvalidResponseException
      * @throws DiscordSerializeException
-     * @throws JsonException
      */
     public function send(Message $message): int
     {
-        $sent = false;
+        $data = $message->toArray();
         $options = [
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_RETURNTRANSFER => true,
         ];
 
-        $data = $message->toArray();
+        if (!empty($this->proxy)) {
+            $options[CURLOPT_PROXY] = $this->proxy;
+        }
 
         try {
             if (isset($data['file'])) {
@@ -53,6 +62,8 @@ class Webhook
 
         $ch = curl_init($this->url);
         curl_setopt_array($ch, $options);
+
+        $sent = false;
 
         while (!$sent) {
             $response = curl_exec($ch);
