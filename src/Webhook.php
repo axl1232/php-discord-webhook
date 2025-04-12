@@ -10,7 +10,7 @@ use JsonException;
 class Webhook
 {
     private string $url;
-    private string $proxy;
+    private ?string $proxy;
 
     public function __construct(string $url)
     {
