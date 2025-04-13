@@ -11,6 +11,7 @@ class Webhook
 {
     private string $url;
     private ?string $proxy;
+    private ?int $timeout;
 
     public function __construct(string $url)
     {
@@ -20,6 +21,13 @@ class Webhook
     public function setProxy(?string $proxy): self
     {
         $this->proxy = $proxy;
+
+        return $this;
+    }
+
+    public function setTimeout(?int $timeout): self
+    {
+        $this->timeout = $timeout;
 
         return $this;
     }
@@ -38,6 +46,10 @@ class Webhook
 
         if (!empty($this->proxy)) {
             $options[CURLOPT_PROXY] = $this->proxy;
+        }
+
+        if (!empty($this->timeout)) {
+            $options[CURLOPT_TIMEOUT] = $this->timeout;
         }
 
         try {
